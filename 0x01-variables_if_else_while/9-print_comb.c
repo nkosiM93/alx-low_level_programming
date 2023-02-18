@@ -10,14 +10,13 @@ int main(void)
 
 	for (character = 48; character <= 57; character++)
 	{
+		putchar((char)character);
 		if (character != 57)
 		{
-			putchar((char)character);
 			putchar(',');
 			putchar(' ');
 		}
-		else
-			putchar((char)character);
 	}
-	return (0);
+			putchar('\n');
+		return (0);
 }
