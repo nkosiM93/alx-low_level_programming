@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main - Prints whether value is positive or negagtive
- *Description: The function takes a value and checks whetherits +/-
- *Return: 0, program ends here
+ *main - positive, zero or neg more
+ *Description: Print where value lies
+ *Return: 0 end.
 */
 int main(void)
 {
@@ -12,10 +12,10 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		printf("is positive\n");
+		printf("%d is positive\n", n);
 	else if (n == 0)
-		printf("is zero\n");
+		printf("%d is zero\n", n);
 	else
-		printf("is negative\n");
+		printf("%d is negative\n", n);
 	return (0);
 }
