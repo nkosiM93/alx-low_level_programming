@@ -2,7 +2,7 @@
 /**
  *main - Print base 10 digits
  *Description: Program prints all digits of the base ten system
- *return: 0, ends the program
+ *Return: 0, ends the program
  */
 int main(void)
 {
