@@ -10,7 +10,7 @@ int main(void)
 
 	for (digit = 48; digit <= 57; digit++)
 		putchar((char)digit);
-	for (digit = 65; digit <= 70; digit++)
+	for (digit = 97; digit <= 102; digit++)
 		putchar((char)digit);
 	putchar('\n');
 
