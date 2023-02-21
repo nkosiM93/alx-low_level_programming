@@ -2,7 +2,7 @@
 /**
  *main - Prints three numbers combinations
  *Return: 0.
- *Description: Print a combination of three digits in the base ten number system.
+ *Description: Print a combination of three digits in the base ten number system
  */
 int main(void)
 {

@@ -1,0 +1,30 @@
+#include <stdio.h>
+/**
+ *main - Complex Combination
+ *Return: 0
+ *Description: Display a complex combination of numbers
+ */
+int main(void)
+{
+	int n1;
+	int n2;
+	int n3;
+	int n4;
+
+	for (n1 = 48; n1 <= 57; n1++)
+		for (n2 = 48; n2 <= 57; n2++)
+			for (n3 = 48; n3 <= 57; n3++)
+			{
+				n4 = n3 + 1;
+
+				for (n4 = 48; n4 <= 57; n4++)
+				{
+					putchar((char)n1);
+					putchar((char)n2);
+					putchar((char)n3);
+					putchar((char)n4);
+					putchar(' ');
+				}
+			}
+	return (0);
+}
