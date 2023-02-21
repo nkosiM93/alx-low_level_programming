@@ -24,6 +24,6 @@ void print_alphabet_x10(void)
 	for (a = 0; a < 10; a++)
 		for (index = 'a'; index <= 'z'; index++)
 		{
-			_putchar(index);
+		       _putchar(index);
 		}
 }
