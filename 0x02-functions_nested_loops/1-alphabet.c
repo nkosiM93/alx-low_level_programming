@@ -10,7 +10,9 @@
 
 void print_alphabet(void)
 {
-	for (char character = 'a'; character <= 'z'; character++)
+	char character = 'a';
+
+	for (; character <= 'z'; character++)
 	{
 		write(1, &character, 1);
 	}
