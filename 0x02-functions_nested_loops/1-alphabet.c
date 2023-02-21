@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *main - prints ABC
+ *print_alphabet - prints ABC
  *Description: Program prints alphabet in lowercase.
  *
  *Return: 0 (Success)
