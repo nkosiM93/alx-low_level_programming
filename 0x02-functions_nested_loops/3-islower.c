@@ -1,4 +1,5 @@
-#include <unistf>
+#include <unistd>
+#include "main.h"
 
 /**
  *_islower - checks if character is lowecase or not
