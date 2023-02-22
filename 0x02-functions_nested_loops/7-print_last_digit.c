@@ -14,6 +14,8 @@ int print_last_digit(int d)
 	if (res < 0)
 		res = -res;
 
-	write(1, &(res + '0'), 1);
+	char c = res + '0';
+
+	write(1, &c, 1);
 	return (res);
 }
