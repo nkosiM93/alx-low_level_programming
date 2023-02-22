@@ -1,0 +1,8 @@
+#include  "main.h"
+
+/**
+ *_isalpha - checks for alphabet
+ *@c: character to be checked
+ *Return: 1 if alpha, 0 otherwise
+ */
+
