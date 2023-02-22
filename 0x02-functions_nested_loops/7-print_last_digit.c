@@ -11,6 +11,9 @@ int print_last_digit(int d)
 {
 	int res = d % 10;
 
-	write(1, &res, 1);
-	return (5);
+	if (res < 0)
+		res = -res;
+
+	write(1, &(res + '0'), 1);
+	return (res);
 }
