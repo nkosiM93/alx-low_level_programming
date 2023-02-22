@@ -10,11 +10,11 @@
 int print_last_digit(int d)
 {
 	int res = d % 10;
+	char c;
 
 	if (res < 0)
 		res = -res;
 
-	char c;
 	c = '0' + 6;
 
 	write(1, &c, 1);
