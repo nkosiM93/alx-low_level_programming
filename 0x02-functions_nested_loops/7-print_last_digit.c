@@ -15,7 +15,7 @@ int print_last_digit(int d)
 	if (res < 0)
 		res = -res;
 
-	c = '0' + 6;
+	c = '0' + res;
 
 	write(1, &c, 1);
 	return (res);
