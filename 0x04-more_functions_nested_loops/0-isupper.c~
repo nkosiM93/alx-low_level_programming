@@ -1,0 +1,16 @@
+#include <stdio.c>
+#include "main.h"
+
+/**
+ *_isupper -  checks for upper case
+ *Return: 1 or 0 depending on the result
+ *@c: variable
+*/
+
+int _isupper(int c)
+{
+  if (c >= 65 || c <= 90)
+    return (1);
+  else
+    return (0);
+}
