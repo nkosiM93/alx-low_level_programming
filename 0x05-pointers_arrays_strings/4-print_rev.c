@@ -9,6 +9,7 @@ void print_rev(char *s)
 {
 	char t;
 	int middle;
+	int count;
 
 	middle = strlen(s) / 2;
 	for (count = 0; count < middle; count++)
