@@ -7,5 +7,17 @@
 
 void print_rev(char *s)
 {
-	strrev(s);
+	char t;
+	int middle;
+
+	middle = strlen(*s) / 2;
+	for (count = 0; count < middle; count++)
+	{
+		t = s[count];
+		s[count] = s[strlen(*s) - count - 1];
+		s[strlen(*s) - count - 1] = t;
+
+	}
+
+	puts(str);
 }
