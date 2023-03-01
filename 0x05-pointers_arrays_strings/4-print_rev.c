@@ -1,25 +1,27 @@
-#include "main.h"
-#include <stdio.h>
 #include <string.h>
+#include "main.h"
+
 /**
- * print_rev - reverse a tring
- * @s: str to b reversed
+ * print_rev -print characters in reverse
+ * @s: string literal
  */
 
 void print_rev(char *s)
 {
-	char t;
-	int middle;
-	int count;
+	int a;
+	int c;
 
-	middle = strlen(s) / 2;
-	for (count = 0; count < middle; count++)
+	a = 0;
+	c = 0;
+
+
+	while (s[a] != '\0')
 	{
-		t = s[count];
-		s[count] = s[strlen(s) - count - 1];
-		s[strlen(s) - count - 1] = t;
-
+		c++;
+		a++;
 	}
 
-	puts(s);
+	for (a = c - 1; a > -1;  a--)
+		_putchar(s[a]);
+	_putchar('\n');
 }
