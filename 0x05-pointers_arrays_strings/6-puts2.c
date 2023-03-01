@@ -11,7 +11,7 @@ void puts2(char *str)
 	c = 0;
 	a = 0;
 
-	while (s[a] != '\0')
+	while (str[a] != '\0')
 	{
 		c++;
 		a++;
@@ -20,7 +20,7 @@ void puts2(char *str)
 	for (a = 0; a < c; a++)
 	{
 		if (a % 2 == 0)
-			_putchar(s[a]);
+			_putchar(str[a]);
 	}
 
 	_putchar('\n');
