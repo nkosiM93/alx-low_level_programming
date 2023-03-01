@@ -11,7 +11,7 @@ void rev_string(char *s)
 {
 	int a, mid;
 	char swap;
-	int length;
+	size_t length;
 
 	mid = strlen(s) / 2;
 	length = sizeof(s) / sizeof(s[0]);
