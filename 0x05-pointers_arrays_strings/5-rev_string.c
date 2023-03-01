@@ -14,7 +14,15 @@ void rev_string(char *s)
 	size_t length;
 
 	mid = strlen(s) / 2;
-	length = sizeof(s) / sizeof(s[0]);
+	a = 0;
+	length = 0;
+
+	while (s[a] != '\0')
+        {
+                length++;
+                a++;
+        }
+
 	for (a = 0; a < mid; a++)
 	{
 		swap = s[a];
