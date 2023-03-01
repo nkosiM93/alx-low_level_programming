@@ -26,8 +26,8 @@ void rev_string(char *s)
 	for (a = 0; a < mid; a++)
 	{
 		swap = s[a];
-		s[a] = s[length - a - 2];
-		s[length - a - 2] =  swap;
+		s[a] = s[length - a - 1];
+		s[length - a - 1] =  swap;
 	}
 
 }
