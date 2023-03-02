@@ -5,6 +5,7 @@
  * _strcat - combine two sentences
  * @dest: the other text
  * @src: The other text
+ * Return: combined string
  */
 
 char *_strcat(char *dest, char *src)
