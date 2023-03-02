@@ -1,5 +1,5 @@
+#include <stdio.h>
 #include "main.h"
-#include <main.h>
 
 /**
  * _strncat -  cobine strings with options
@@ -11,6 +11,10 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
+	int c, a;
+
+	a = 0;
+
 	while (dest[a] != '\0')
 		a++;
 
