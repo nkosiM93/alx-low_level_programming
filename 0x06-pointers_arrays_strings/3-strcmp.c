@@ -20,6 +20,10 @@ int _strcmp(char *s1, char *s2)
 
 	while (s2[sc2] != '\0')
 		sc2++;
-	
-	return (sc1 - sc2);
+
+	if (sc1 < sc2)
+		return (-15);
+	else if (sc1 > sc2)
+		return (15);
+	return (0);
 }
