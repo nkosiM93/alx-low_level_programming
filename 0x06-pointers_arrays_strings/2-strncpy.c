@@ -5,7 +5,8 @@
  * _strncpy - copy up to n characters
  * @dest: final string
  * @src: to be appended
- * Return: final string
+ * @n: number of chars to be copied
+ *  Return: final string
  */
 
 char *_strncpy(char *dest, char *src, int n)
