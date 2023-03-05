@@ -14,7 +14,7 @@ char *rot13(char *str)
 
 	int s, d;
 
-	for (s = 0; s != '\0'; s++) /*String iteration*/
+	for (s = 0; str[s] != '\0'; s++) /*String iteration*/
 		for (d = 0; d < 52; d++)
 		{
 			if (str[s] == alpha52[d])
