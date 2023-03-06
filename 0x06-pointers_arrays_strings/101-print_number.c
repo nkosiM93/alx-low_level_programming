@@ -18,10 +18,17 @@ void print_number(int n)
 	}
 
 	if (n < 0)
-	{
-		n = -n; /*change the value to a positive one*/
-		_putchar('-');
-	}
+		if (n != -2147483648)
+		{
+			n = -n; /*change the value to a positive one*/
+			_putchar('-');
+		}
+		else
+		{
+			_putchar('-');
+			_putchar('2');
+			n = 147483648;
+		}
 
 	while (n / divisor == 0)
 		divisor /= 10;
