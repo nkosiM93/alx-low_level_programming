@@ -7,8 +7,9 @@
 
 void print_number(int n)
 {
-	int digits[12];
-	int y;
+	int divisor;
+
+	divisor = 1000000000;
 
 	if (n == 0)
 	{
@@ -22,15 +23,13 @@ void print_number(int n)
 		_putchar('-');
 	}
 
-	y = -1;
+	while (n / divisor == 0)
+		divisor /= 10;
 
-	while (n != 0)
+	while (divisor >= 1)
 	{
-		digits[++y] = n % 10;
-		n /= 10;
+		_putchar(48 + (n / divisor));
+		n %= divisor;
+		divisor /= 10;
 	}
-
-	/*Display the digits*/
-	for (; y >= 0; y--)
-		_putchar(48 + digits[y]);
 }
