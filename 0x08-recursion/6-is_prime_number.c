@@ -47,10 +47,12 @@ int primeNumb(int nm, int t)
 	}
 
 	if (t == 9)
+	{
 		if (nm % t == 0)
 			answer = 0;
 		else
 			answer = 1;
+	}
 
 	return (answer);
 }
