@@ -8,21 +8,12 @@
 
 int _sqrt_recursion(int n)
 {
-	int m;
+	return squareRoot(n, 1)
+}
 
-	m = 0;
+int squareRoot(int n, int n1)
+{
+	int nE;
 
-	if (n == 1)
-		return (1);
-
-	if (n == 0)
-		return (0);
-
-	while (m * m < n)
-		m++;
-
-	if (m * m == n)
-		return (m);
-	else
-		return (-1);
+	if (n1 - ((n1 + 2 / n1)/2) > 0)
 }
