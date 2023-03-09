@@ -31,7 +31,7 @@ int is_prime_number(int n)
 
 int primeNumb(int nm, int t)
 {
-	int asnwer;
+	int answer;
 
 	if (nm == t)
 		return (1);
