@@ -31,7 +31,7 @@ char *_strdup(char *str)
 
 		while (y > 0)
 		{
-			dupli[y - 1] = str[y - 1]
+			dupli[y - 1] = str[y - 1];
 		}
 
 		return (dupli);
