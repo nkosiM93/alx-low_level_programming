@@ -15,29 +15,26 @@ char *_strdup(char *str)
 
 	y = 0;
 
-	dupli = malloc(sizeof(char) * y);
-
-	if (dupli != NULL)
-	{
-
-	while (str[y] != '\0')
-	{
-		y++;
-	}
-
 	if (str != NULL)
 	{
+		while (str[y] != '\0')
+		{
+			y++;
+		}
+
 		dupli = malloc(sizeof(char) * y);
+
+		if (dupli == NULL)
+			return (NULL);
 
 		while (y > 0)
 		{
 			dupli[y - 1] = str[y - 1];
 		}
 
+		free(dupli);
+
 		return (dupli);
-	}
-	else
-		return (NULL);
 	}
 	else
 		return (NULL);
