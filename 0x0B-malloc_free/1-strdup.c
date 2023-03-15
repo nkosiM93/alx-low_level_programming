@@ -11,32 +11,14 @@ char *_strdup(char *str)
 {
 	char *dupli;
 
-	int y;
+	int len;
 
-	y = 0;
+	dupli = malloc(sizeof(char) * (strlen(str) + 1));
 
-	if (str != NULL)
-	{
-		while (str[y] != '\0')
-		{
-			y++;
-		}
-
-		dupli = malloc(sizeof(char) * y);
-
-		if (dupli == NULL)
-			return (NULL);
-
-		while (y > 0)
-		{
-			*(dupli + (y - 1)) = *(str + (y - 1));
-			y--;
-		}
-
-		free(dupli);
-
-		return (dupli);
-	}
-	else
+	if (dupli == NULL)
 		return (NULL);
+
+	strcpy(dupli, str);
+
+	return (dupli);
 }
