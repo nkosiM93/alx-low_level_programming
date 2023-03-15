@@ -8,7 +8,10 @@
  */
 
 char *_strdup(char *str)
-{
+{i
+	if (str == NULL)
+		return (NULL);
+
 	char *dupli;
 
 	int len;
