@@ -18,22 +18,22 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return  (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		len += strlen(*(av + i));
 	}
 
-	len += (ac - 1);
+	len += ac;
 
 	str1 = malloc(len);
 
 	if (str1 == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
-		strcat(str1, "\n");
 		strcat(str1, av[i]);
+		strcat(str1, "\n");
 	}
 
 	return (str1);
