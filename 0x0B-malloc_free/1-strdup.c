@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strdup - retuns pointer to newly allocated space in memory
@@ -9,12 +10,10 @@
 
 char *_strdup(char *str)
 {
-	if (str == NULL)
-		return (NULL);
-
 	char *dupli;
 
-	int len;
+	if (str == NULL)
+		return (NULL);
 
 	dupli = malloc(sizeof(char) * (strlen(str) + 1));
 
