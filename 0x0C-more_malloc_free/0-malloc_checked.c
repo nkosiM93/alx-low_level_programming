@@ -13,6 +13,6 @@ void *malloc_checked(unsigned int b)
 
 	if (pInt == NULL)
 		exit(98);
-	
+
 	return (pInt);
 }
