@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	
 	for (i = 0; i < nmemb; i++)
-		*(returned + i) = (unsigned char)0;
+		*(returned + i) = 0;
 
 	return (returned);
 }
