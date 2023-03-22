@@ -11,7 +11,7 @@
 void print_dog(struct dog *d)
 {
 	char result[20];
-	
+
 	sprintf(result, "%f", d->age);
 
 	if (d)
