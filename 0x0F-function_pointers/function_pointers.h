@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stddef.h>
+
 #ifndef FUNC_POINTERS
 #define FUNC_POINTERS
 
