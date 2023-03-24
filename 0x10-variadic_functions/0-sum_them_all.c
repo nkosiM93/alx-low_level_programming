@@ -20,6 +20,6 @@ int sum_them_all(const unsigned int n, ...)
 		sum += va_arg(list, int);
 	}
 
-	var_end(list); /* clen up*/
+	va_end(list); /* clen up*/
 	return (sum);
 }
