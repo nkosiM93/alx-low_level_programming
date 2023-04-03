@@ -34,11 +34,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (*head);
 	}
 
-	while (head->next != NULL)
-		last = head->next;
+	while (last->next != NULL)
+		last = last->next;
 
-	*head->next = newN;
+	last->next = newN;
 
 	return (*head);
-
 }
