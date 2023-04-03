@@ -18,8 +18,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	newN = malloc(sizeof(list_t)); /*mem allocation for the new struct*/
 
-	if (newN == NULL)
+	if (newN == NULL || strdup == NULL)
 	{
+		free(str1);
 		free(newN);
 		return (NULL);
 	}
