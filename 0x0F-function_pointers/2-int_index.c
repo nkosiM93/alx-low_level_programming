@@ -5,6 +5,7 @@
  * @size: ...
  * @array: ...
  * @cmp: ...
+ * Return: ...
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -23,6 +24,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (ind);
 	}
 	}
-	
+
 	return (-1);
 }
