@@ -1,71 +1,72 @@
 #include "lists.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * listint_len -  returns the number of elements in a linked listint_t list
- * @h: head pointer of singly linked list
- *
- * Return: Number of elements in list
+ * makeNode - makes anew node
+ * @cnode: pointer to the current node
+ * Return: returns the address of the newly created node
  */
-size_t listint_len(const listint_t *h)
+
+listint_t *makeNode(listint_t *node, listint_t *p, int n)
 {
-	unsigned int size = 0;
+	listint_t *node1 = malloc(sizeof(listint_t));
 
-	while (h != 0)
-		h = h->next, size++;
+	if (!node1)
+		return (NULL);
 
-	return (size);
+	node1->n = n;
+
+	if (node == NULL)
+	{
+		node1->next = NULL;
+		return (node1);
+	}
+		
+	node1->next = p->next;
+	p->next = node1;
+
+	return (node1);
 }
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position
- * @head: pointer to head of singly linked list
- * @idx: index of the list where the new node should be added, starts at 0
- * @n: value that the node will have
- *
- * Return: the address of the new node, or NULL if it failed
+ * insert_nodeint_at_index - inserts a node at a specific
+ * position
+ * @head: the pointer to the first node
+ * @idx: position to add the node
+ * @n: the integer to insert into the node/contained
+ * Return: address of the new node
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int len = listint_len(*head), count = 0;
-	listint_t *new_node, *tmp1, *tmp2;
+	listint_t *dup, *prev;
+	unsigned int ind = 0;
 
-	if (head == 0 && idx > 0)
-		return (0);
+	if (!head)
+		return (NULL);
 
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == 0)
-		return (0);
+	dup = *head;
 
-	if (head == 0 && idx == 0)
+	while (dup->next != NULL)
 	{
-		new_node->n = n, new_node->next = 0, *head = new_node;
-		return (new_node);
+		if (idx == ind)
+		{
+			return (makeNode(dup, prev, n));
+		}
+		else
+		{
+			prev = dup;
+			dup = dup->next;
+			ind++;
+		}
 	}
 
-	if (idx > len)
+	prev = NULL;
+
+	if (dup->next == NULL && idx == 0)
 	{
-		free(new_node);
-		return (0);
+		*head = makeNode(dup, NULL, n);
+		return (*head);
 	}
-	tmp1 = *head;
-	new_node->n = n;
-	while (count < idx && idx != 0)
-	{
-		tmp2 = tmp1, tmp1 = tmp1->next;
-		count++;
-	}
-	if (idx == 0)
-	{
-		*head = new_node;
-		new_node->next = tmp1;
-	}
-	else
-	{
-		tmp2->next = new_node;
-		new_node->next = tmp1;
-	}
-	return (new_node);
+	
+	return (NULL);
 }
