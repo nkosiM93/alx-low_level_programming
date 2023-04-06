@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * pop_listint - deletes the head node and returns 
+ * pop_listint - deletes the head node and returns
  * the data that was contained in the head node
  *
  * @head: the linked list
@@ -15,10 +15,10 @@ int pop_listint(listint_t **head)
 
 	if (!head || !(*head))
 		return (0);
-	
+
 	n1 = (*head)->n;
 	*head = (*head)->next;
-	
+
 	free(tmp);
 
 	return (n1);
