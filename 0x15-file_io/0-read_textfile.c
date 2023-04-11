@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t count = 0;
 	FILE *fp;
-	char c = 'o';
+	char c;
 
 	if (filename != NULL)
 	{
@@ -19,9 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if(fp == NULL)
 			return(0);
 
-		while (letters > 0 && c != EOF)
+		while (letters > 0 && (c = getc(fp)) != EOF)
 		{
-			c = getc(fp);
 			putc(c, stdout);
 			count++;
 			letters--;
