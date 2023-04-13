@@ -15,7 +15,7 @@ int main (int ac, char **av)
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]);
-		exit(1);
+		exit(97);
 	}
 
 	_copy(av[1], av[2]);
