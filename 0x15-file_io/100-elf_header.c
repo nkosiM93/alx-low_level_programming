@@ -79,7 +79,7 @@ void _data(char *h)
 		printf("<unknown: %02hx>\n", h[5]);
 }
 
-**
+/**
  * _version - print elf version
  *
  * @h: header
