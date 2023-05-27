@@ -1,41 +1,49 @@
-#include "main.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * create_file - creates a file
- *
+ * read_textfile -  reads a text file and prints it
+ * to the POSIX standard output
  * @filename: name of the file
- * @text_content: NULL terminated string to write to the file
+ * @letters: number of letters it should read and print
  *
- * Return: Returns: 1 on success, -1 on failure
+ * Return: returns the actual number of letters it could read and print
  */
-int create_file(const char *filename, char *text_content)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, checkw, l = 0;
+	int fd, checkr, checkw;
+	char *c;
 
 	if (filename == 0)
-		return (-1);
+		return (0);
 
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	c = malloc(letters + 1);
+
+	if (c == 0)
+		return (0);
+
+	fd  = open(filename, O_RDONLY);
 
 	if (fd == -1)
-		return (-1);
+		return (free(c), 0);
 
-	if (text_content)
-	{
-		while (text_content[l] != 0)
-			l++;
-		checkw = write(fd, text_content, l);
+	checkr = read(fd, c, letters);
 
-		if (checkw == -1)
-			return (-1);
-	}
+	if (checkr == -1)
+		return (free(c), 0);
 
+	c[letters] = '\0';
+
+	checkw = write(STDOUT_FILENO, c, checkr);
+	if (checkw == -1)
+		return (free(c), 0);
+
+	free(c);
 	close(fd);
-	return (1);
+	return (checkw);
 }
 
