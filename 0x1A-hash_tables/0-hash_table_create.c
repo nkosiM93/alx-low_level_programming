@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!hashTable)
 		return (NULL);
-	hashTable->size = SIZE;
+	hashTable->size = size;
 	hashTable->array = calloc(size, sizeof(hash_node_t *));
 	if (!hashTable->array)
 		return (NULL);
