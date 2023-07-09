@@ -1,5 +1,3 @@
-#include "hash_tables.h"
-
 /**hash_djb2 - implements the djb2 hash funtion
  * @str: the string to be hashed
  * Return: the hash on success
