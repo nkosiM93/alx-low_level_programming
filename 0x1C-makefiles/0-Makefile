@@ -1,7 +1,9 @@
 objects=main.o school.o
 
+all : school
 school:$(objects)
 	gcc $(objects) -o school
 
 main.o	: m.h
 print.o : m.h
+
