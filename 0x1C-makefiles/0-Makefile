@@ -1,0 +1,7 @@
+objects=main.o school.o
+
+school:$(objects)
+	gcc $(objects) -o school
+
+main.o	: m.h
+print.o : m.h
